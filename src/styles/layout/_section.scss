@@ -8,10 +8,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    overflow-y: scroll;
-    @media (max-width: 992px) {
-        max-height: 800px;
-    }
 }
 .section__title {
     color: white;
