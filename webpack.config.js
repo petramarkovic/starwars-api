@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack app',
+            title: 'Starwars greatness',
             filename: 'index.html',
             template: 'src/index.html'
         })

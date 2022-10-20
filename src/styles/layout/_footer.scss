@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    color: $white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid $yellow;
+    z-index: 20;
+    background-color: $black;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__link {
+    color: $yellow;
+    transition: $transition;
+    &:hover {
+        opacity: 0.6;
+    }
+}

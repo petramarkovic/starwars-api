@@ -1,1 +1,1 @@
-# webpack-starter
+# starwars-api

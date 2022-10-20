@@ -4,58 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <header class="header">
-        <div class="wrap">
-            <div class="header__container">
-                <a href="/" class="header__home">
-                    <img class="header__logo" src="" alt="Logo">
-                    logo
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a class="link nav__link" href="javascript:;">link</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="link nav__link" href="javascript:;">link</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="link nav__link" href="javascript:;">link</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="link nav__link" href="javascript:;">link</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main class="main">
-        <section class="section banner">
+    <div id="particles-js">
+        <header class="header">
             <div class="wrap">
-                <div class="banner__content">
-                    <div class="banner__col">
-                        <div class="banner__info">
-                            <span class="tag banner__tag">example tag</span>
-                            <h1 class="h1 banner__title">Example.</h1>
-                            <p class="text banner__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ullam.</p>
-                            <a href="javascript:;" class="btn banner__btn">call to action</a>
-                        </div>
+                <div class="header__container">
+                    <a href="/" class="header__home">
+                        <img class="header__logo" src="logo.png" alt="">
+                    </a>
+                    <nav class="nav">
+                        <button class="hamburger hamburger--emphatic" type="button">
+                            <span class="hamburger-box">
+                              <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <button type="button" class="nav__btn js-people-btn">People</button>
+                            </li>
+                            <li class="nav__item">
+                                <button type="button" class="nav__btn js-films-btn">Films</button>
+                            </li>
+                            <li class="nav__item">
+                                <button type="button" class="nav__btn js-starships-btn">Starships</button>
+                            </li>
+                            <li class="nav__item">
+                                <button type="button" class="nav__btn js-planets-btn">Planets</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section container">
+                <div class="wrap">
+                    <h1 class="section__title js-section-title">Do. Or do not. There is no try.</h1>
+                    <div class="section__content">
                     </div>
-                    <div class="banner__col">
-                        <div class="banner__img-wrap">
-                            <div class="banner__img has-cover" style="background-image: url(https://images.unsplash.com/photo-1666132430954-7e9f29b70144?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);"></div>
-                        </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrap">
+                <div class="footer__content">
+                    <div class="footer__col">
+                        <small>&#169; 2022</small>
+                    </div>
+                    <div class="footer__col">
+                        <a target="_blank" class="footer__link" href="https://github.com/petramarkovic">@petramarkovic</a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer"></footer>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 </body>
 </html>

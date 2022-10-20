@@ -8,7 +8,10 @@
 // components
 @import './components/buttons';
 
+// plugins
+@import './plugins/hamburger';
+
 // layout
 @import './layout/header';
-@import './layout/banner';
+@import './layout/section';
 @import './layout/footer';
