@@ -3,13 +3,21 @@ const data = {
     filmsButton: document.querySelector('.js-films-btn'),
     starshipsButton: document.querySelector('.js-starships-btn'),
     planetsButton: document.querySelector('.js-planets-btn'),
+    nav: document.querySelector('.nav'),
+    navList: document.querySelector('.nav__list'),
+    closeSectionButton: document.querySelector('.js-close-section'),
     data: {},
+
+    closeSectionActiveClass: 'close-section--active',
+    sectionActiveClass: 'section--active',
+    navActiveClass: 'nav--active',
 
     init: function() {
         this.filmsButtonEventListener();
         this.peopleButtonEventListener();
         this.starshipsButtonEventListener();
         this.planetsButtonEventListener();
+        this.closeSectionEventListener();
     },
 
     filmsButtonEventListener: function() {
@@ -29,8 +37,10 @@ const data = {
     },
 
     cleanContainerHtml: function() {
-        const section = document.querySelector('.section__content');
-        section.innerHTML = '';
+        const section = document.querySelector('.section');
+        const sectionContent = document.querySelector('.section__content');
+        sectionContent.innerHTML = '';
+        section.classList.add(this.sectionActiveClass);
     },
 
     setTitle: function(title) {
@@ -38,7 +48,27 @@ const data = {
         titleEl.textContent = title;
     },
 
+    removeNavList: function() {
+        // this.nav.classList.add('nav--animation');
+        this.nav.classList.remove(this.navActiveClass);
+        this.closeSectionButton.classList.add(this.closeSectionActiveClass);
+    },
+
+    closeSectionEventListener: function() {
+        this.closeSectionButton.addEventListener('click', () => {
+            const section = document.querySelector('.section');
+            this.closeSectionButton.classList.remove(this.closeSectionActiveClass);
+            section.classList.remove(this.sectionActiveClass);
+            // data.setTitle('Do. Or do not. There is no try.');
+            setTimeout(() => {
+                this.nav.classList.add(this.navActiveClass);
+                data.setTitle('Do. Or do not. There is no try.');
+            }, 200);
+        })
+    },
+
     loadFilms: function() {
+        data.removeNavList();
         data.cleanContainerHtml();
         data.setTitle('Films');
         $.ajax({
@@ -65,6 +95,7 @@ const data = {
     },
 
     loadPeople: function() {
+        data.removeNavList();
         data.cleanContainerHtml();
         data.setTitle('People');
         $.ajax({
@@ -91,6 +122,7 @@ const data = {
     },
 
     loadStarships: function() {
+        data.removeNavList();
         data.cleanContainerHtml();
         data.setTitle('Starships');
         $.ajax({
@@ -118,6 +150,7 @@ const data = {
     },
 
     loadPlanets: function() {
+        data.removeNavList();
         data.cleanContainerHtml();
         data.setTitle('Planets');
         $.ajax({
