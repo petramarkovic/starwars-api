@@ -81,7 +81,9 @@ const data = {
                    $('.js-loader').show();
                 },
                 success: function(data) {
-                   $('.js-loader').hide();
+                   setTimeout(() => {
+                    $('.js-loader').hide();
+                   }, 500);
                     const items = data.results;
                     items.map((element) => {
                         const container = document.querySelector('.section__content');
@@ -93,7 +95,9 @@ const data = {
                             <span class="desc desc--md">Director: ${element.director}</span>
                             <span class="desc desc--sm">Release date: ${element.release_date}</span>
                         `;
-                        container.appendChild(div);
+                        setTimeout(() => {
+                            container.appendChild(div);
+                        }, 500);
                     })
                     console.log('sucess');
                 }
@@ -113,7 +117,9 @@ const data = {
                     $('.js-loader').show();
                  },
                 success: function(data) {
-                    $('.js-loader').hide();
+                    setTimeout(() => {
+                        $('.js-loader').hide();
+                    }, 500);
                     const items = data.results;
                     items.map((element) => {
                         const container = document.querySelector('.section__content');
@@ -125,7 +131,9 @@ const data = {
                             <span class="desc desc--md">Gender: ${element.gender}</span>
                             <span class="desc desc--sm">Birth year: ${element.birth_year}</span>
                         `;
-                        container.appendChild(div);
+                        setTimeout(() => {
+                            container.appendChild(div);
+                        }, 500);
                     })
                 }
             });
@@ -144,7 +152,9 @@ const data = {
                     $('.js-loader').show();
                  },
                 success: function(data) {
-                    $('.js-loader').hide();
+                    setTimeout(() => {
+                        $('.js-loader').hide();
+                    }, 500);
                     const items = data.results;
                     items.map((element) => {
                         const container = document.querySelector('.section__content');
@@ -157,7 +167,9 @@ const data = {
                             <span class="desc desc--sm">Passengers: ${element.passengers}</span>
                             <span class="desc desc--xs">Manufacturer: ${element.manufacturer}</span>
                         `;
-                        container.appendChild(div);
+                        setTimeout(() => {
+                            container.appendChild(div);
+                        }, 500);
                     })
                 }
             });
@@ -176,7 +188,9 @@ const data = {
                     $('.js-loader').show();
                  },
                 success: function(data) {
-                    $('.js-loader').hide();
+                    setTimeout(() => {
+                        $('.js-loader').hide();
+                    }, 500);
                     const items = data.results;
                     items.map((element) => {
                         const container = document.querySelector('.section__content');
@@ -189,7 +203,9 @@ const data = {
                             <span class="desc desc--sm">Population: ${element.population}</span>
                             <span class="desc desc--xs">Terrain: ${element.terrain}</span>
                         `;
-                        container.appendChild(div);
+                        setTimeout(() => {
+                            container.appendChild(div);
+                        }, 500);
                     })
                 }
             });
