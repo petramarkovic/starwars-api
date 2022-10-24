@@ -58,6 +58,7 @@ const data = {
             const section = document.querySelector('.section');
             this.closeSectionButton.classList.remove(this.closeSectionActiveClass);
             section.classList.remove(this.sectionActiveClass);
+            data.cleanContainerHtml();
             setTimeout(() => {
                 this.nav.classList.add(this.navActiveClass);
                 data.setTitle('Do. Or do not. There is no try.');

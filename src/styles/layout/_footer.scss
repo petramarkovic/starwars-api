@@ -1,10 +1,18 @@
 .footer {
-    width: 100%;
+    width: 100px;
     padding: 20px 0;
     color: $white;
-    border-top: 1px solid $yellow;
-    background-color: $black;
-    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    z-index: 10;
+    @media (max-width: 992px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: $black;
+    }
 }
 .footer__content {
     display: flex;
@@ -14,7 +22,12 @@
 .footer__link {
     color: $yellow;
     transition: $transition;
+    transform: rotate(90deg) translateX(-50%);
+    display: block;
     &:hover {
         opacity: 0.6;
+    }
+    @media (max-width: 992px) {
+        transform: none;
     }
 }
