@@ -60,3 +60,40 @@
     margin-top: 10px;
     font-size: 10px;
 }
+.loader {
+    font-size: 100px;
+    color: $white;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loader__text {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: $yellow;
+    text-align: center;
+}
+.loader__img {
+    width: 200px;
+    height: 151px;
+}
+.dot {
+    display: inline;
+    position: relative;
+    animation: showHideDot 1.5s ease-in-out infinite;
+    &.one { animation-delay: 0.2s; }
+    &.two { animation-delay: 0.4s; }
+    &.three { animation-delay: 0.6s; }
+}
+@keyframes showHideDot {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  

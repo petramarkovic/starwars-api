@@ -1,8 +1,6 @@
 import './styles/main.scss';
 import logo from './assets/logo.png';
-
-import app from "./app";
-app.init();
+import loadingImage from './assets/baby-yoda.svg';
 
 import data from './data';
 data.init();
