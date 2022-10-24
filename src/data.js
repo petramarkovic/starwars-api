@@ -7,7 +7,6 @@ const data = {
     navList: document.querySelector('.nav__list'),
     closeSectionButton: document.querySelector('.js-close-section'),
     loader: document.querySelector('.js-loader'),
-    data: {},
 
     closeSectionActiveClass: 'close-section--active',
     sectionActiveClass: 'section--active',
@@ -50,7 +49,6 @@ const data = {
     },
 
     removeNavList: function() {
-        // this.nav.classList.add('nav--animation');
         this.nav.classList.remove(this.navActiveClass);
         this.closeSectionButton.classList.add(this.closeSectionActiveClass);
     },
@@ -60,7 +58,6 @@ const data = {
             const section = document.querySelector('.section');
             this.closeSectionButton.classList.remove(this.closeSectionActiveClass);
             section.classList.remove(this.sectionActiveClass);
-            // data.setTitle('Do. Or do not. There is no try.');
             setTimeout(() => {
                 this.nav.classList.add(this.navActiveClass);
                 data.setTitle('Do. Or do not. There is no try.');
@@ -99,7 +96,6 @@ const data = {
                             container.appendChild(div);
                         }, 500);
                     })
-                    console.log('sucess');
                 }
             });
     },
