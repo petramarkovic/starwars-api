@@ -1,5 +1,4 @@
-# ignore everything in the "dist" directory:
-dist
+
 
 # ignore node_modules files
 node_modules
