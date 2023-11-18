@@ -2,6 +2,8 @@ Star Wars Data Explorer ✌✨⭐🌟
 
 Explore the Star Wars universe with this web application built using HTML, SCSS, and JavaScript. The project leverages the Star Wars API (SWAPI) to fetch and showcase a variety of Star Wars data.
 
+Check out the code on the develop branch, of course.
+
 Features
 Dynamic Data Display: Retrieve information about characters, planets, starships, and more from the Star Wars universe.
 Responsive Design: The application is designed to work seamlessly on desktops, tablets, and mobile devices.
